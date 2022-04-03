@@ -1,4 +1,4 @@
-package com.hardkode.post;
+package com.hardkode.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

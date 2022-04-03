@@ -1,4 +1,4 @@
-package com.hardkode.post;
+package com.hardkode.user;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

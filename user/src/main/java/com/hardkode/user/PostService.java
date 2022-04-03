@@ -1,4 +1,4 @@
-package com.hardkode.post;
+package com.hardkode.user;
 
 import org.springframework.stereotype.Service;
 
@@ -7,7 +7,7 @@ public record PostService(PostRepository postRepository) {
 
     public void sendPost(PostingRequest request) {
         Post post = Post.builder()
-                .userName(request.userName())
+                .user(request.userName())
                 .content(request.content())
                 .build();
 

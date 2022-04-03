@@ -1,18 +1,4 @@
 services:
-  postgres-post:
-    container_name: postgres
-    image: postgres
-    environment:
-      POSTGRES_USER: hardkode
-      POSTGRES_PASSWORD: password
-      PGDATA: /data/postgres
-    volumes:
-      - postgres:/data/postgres
-    ports:
-      - "5432:5432"
-    networks:
-      - postgres
-    restart: unless-stopped
   postgres-user:
     container_name: postgres
     image: postgres
@@ -41,23 +27,11 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-  post:
-    image: hardkode/post:latest
-    container_name: post
-    ports:
-      - "8080:8080"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-      - postgres
-    depends_on:
-      - postgres-post
   user:
     image: hardkode/user:latest
     container_name: user
     ports:
-      - "8081:8081"
+      - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     networks:

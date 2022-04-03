@@ -1,4 +1,4 @@
-package com.hardkode.post;
+package com.hardkode.user;
 
 public record PostingRequest(
         String userName,
